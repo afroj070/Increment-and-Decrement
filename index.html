@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            padding: 30px;
+        }
+        .btn1{
+            width: 200px;
+            height: 50px;
+            padding: 20px;
+            text-align: center;
+            border-radius: 5px;
+            background-color: green;
+            color: white;
+        }
+        .btn2{
+            width: 200px;
+            height: 50px;
+            padding: 20px;
+            text-align: center;
+            border-radius: 5px;
+            background-color: red;
+            color: white;
+        }
+        .number{
+            width: 370px;
+            /* border: 1px solid red; */
+            padding: 15px;
+            background-color: rgb(85, 110, 110);
+            color: white;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <button class="btn1" onclick="
+        cartAdd ++;
+        document.querySelector('.number').innerText= `Number is a Increment${cartAdd}`;
+            ">ADD TO NUMBER</button>
+        <button class="btn2" 
+        onclick="
+        cartAdd --;
+        document.querySelector('.number').innerText= `Number is a Decrement${cartAdd}`;
+        ">Remove</button>
+        <h1 class="number"></h1>
+    </div>
+
+    <script>
+        let cartAdd = 0;
+        document.querySelector('.number').innerText=`Add to Number ${cartAdd}`;
+    </script>
+</body>
+</html>
